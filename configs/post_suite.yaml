@@ -1,0 +1,18 @@
+name: araccount_post_suite
+expectations:
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: ARAccountId_New
+
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: ARAccountId_New
+
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: is_duplicate
+      value_set: [0, 1]
+
+  - expectation_type: expect_compound_columns_to_be_unique
+    kwargs:
+      column_list: ["ARAccountId_New", "source"]
