@@ -1,6 +1,8 @@
 # Runtime data
-/output/
-/source/
+/output/*
+!/output/.gitkeep
+/source/*
+!/source/.gitkeep
 
 # Python cache and build artifacts
 __pycache__/
